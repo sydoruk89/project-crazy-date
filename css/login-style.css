@@ -1,0 +1,204 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .logo-style{
+    height: 30px;
+    width: 30px;
+  }
+  
+  .logo-label-style{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: -25px;
+    margin-left: 40px;
+  }
+  
+  .navbar-default{
+    border-bottom: 2px solid #fff;
+  }
+  
+  .navbar-brand{
+    padding: 10px;
+    width: 75px;
+  }
+  
+  .navbar-right{
+    padding-top: 7px;
+    padding-right: 10px;
+  }
+  
+  .center-nav{
+    display: inline-block;
+    list-style-type: none;
+  }
+  
+  .top-nav-style{
+    color: #fff;
+    height: 20px;
+  }
+  
+  .top-nav-style, .p{
+    margin: 0px;
+  }
+  
+  .container-color{
+    background-color: #112126;
+  }
+  
+  .container-color-new{
+    background-color: #112126b7;
+    transition: 1s ease;
+  }
+  
+  .transparent-color{
+    background-color: #11212600;
+    transition: 1s ease;
+  }
+  
+  #nav {
+    width: 475px;
+    margin:0 auto;
+    list-style:none;
+  }
+  
+  #nav li {
+    float:left;  
+  }
+  
+  #nav a {
+    display:block;
+    text-align:center;
+    width: auto;
+    margin: 15px;
+    text-decoration:none;
+    color: #fff;
+  }
+  
+  .btn-style-login{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: #fff solid 2px;
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .btn-style-register{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: #fff solid 2px;
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .li-app{
+    width: 60px;
+    height: 50px;
+  }
+  
+  .li-dating{
+    width: 117px;
+    height: 50px;
+  }
+  
+  .li-testi{
+    width: 105px;
+    height: 50px;
+  }
+  
+  .li-help{
+    width: 105px;
+    height: 50px;
+  }
+  
+  .li-about{
+    width: 88px;
+    height: 50px;
+  }
+  
+  .li-bg{
+    background-color: #114555;
+  }
+  
+  .fit{
+    margin: 0;
+    width: 100%;
+  }
+  
+  .container{
+    padding-top: 10px;
+  }
+  
+  .footer{
+    height: 100%;
+    width: 100%;
+    background-image: url("img/logo-black.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .right-margin{
+    margin-right: 20px;
+    font-size: 12px;
+  }
+  
+  a{
+    color: #fff;
+  }
+  
+  a:hover{
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .iMet{
+    margin-top: -20px;
+    margin-right: 20px;
+  }
+  
+  .copyright-color{
+    color: #95989A;
+  }
+  
+  .content{
+    height: 100%;
+    background-image: url("img/logo-white.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 150px;
+    padding-top: 13px;
+  }
+  
+  .fit{
+    width: 100%;
+  }
+  
+  .center-col{
+    text-align: center;
+  }
+  
+  .panel-properties{
+    margin-top: 200px;
+    width: 500px;
+  }
+  
+  .button-properties{
+    background-color: #fff;
+  }
+  
+  .panel-footer{
+    background-color: #112126;
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .panel-properties{
+        width: 100%;
+    }
+  }
+  
