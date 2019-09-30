@@ -25,13 +25,16 @@
       <main>
         <section class="account-form">
           <div class="row">
-            <form action="#" class="contact-form about-form">
-              <div class="row" id="jsFormContainer">
+            <img id="image1"/>
+          </div>
+          <div class="row" id="div-form">
+            <form action="#" id ="form" class="contact-form about-form">
+              <div class="row">
                 <div class="col span-1-of-3">
                   <label for="name">Name</label>
                 </div>
                 <div class="col span-2-of-3">
-                  <input type="text" name="name" id="name" placeholder="" required;>
+                  <input type="text" name="name" id="name" placeholder="Your name" required>
                 </div>
               </div>
               <div class="row">
@@ -39,7 +42,7 @@
                   <label for="email">Email</label>
                 </div>
                 <div class="col span-2-of-3">
-                  <input type="email" name="email" id="email" placeholder="" required;>
+                  <input type="email" name="email" id="email" placeholder="Your email" required>
                 </div>
               </div>
               <div class="row">
@@ -47,7 +50,7 @@
                   <label for="password">Password</label>
                 </div>
                 <div class="col span-2-of-3">
-                  <input type="password" name="password" id="password" placeholder="" required;>
+                  <input type="password" name="password" id="password" required>
                 </div>
               </div>
               <div class="row">
@@ -55,26 +58,25 @@
                   <label for="password">Re-Type Password</label>
                 </div>
                 <div class="col span-2-of-3">
-                  <input type="password" name="password" id="password" placeholder="" required;>
+                  <input type="password" name="password" id="password" required>
                 </div>
               </div>
-            <div class="row">
+              <div class="row">
                 <div class="col span-1-of-3">
                   <label for="gender">I'm a</label>
                 </div>
                 <div class="col span-2-of-3">
-                <form action="/action_page.php" method="get"></div>
-                  <label for="male">Man</label>
-                  <input type="radio" name="gender" id="male" value="male">
-                  <label for="female">Woman</label>
-                  <input type="radio" name="gender" id="female" value="female">
-                  <label for="other">Other</label>
-                  <input type="radio" name="gender" id="other" value="other">
-              </form>
+                  <select name="gender" id="gender">
+                    <option value="Man">Man</option>
+                    <option value="Woman">Woman</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
               <div class="row">
-                  <div class="col span-1-of-3">
-                    <label for="age">Age</label>
-                  </div>
+                <div class="col span-1-of-3">
+                  <label for="age">Age</label>
+                </div>
                 <div class="col span-2-of-3">
                   <select name="age" id="age">
                     <option value="18-23">18-23</option>
@@ -84,23 +86,22 @@
                   </select>
                 </div>
               </div>
-                <div class="row">
-                    <div class="col span-1-of-3">
-                      <label for="gender-preference">I'm Interested In</label>
-                    </div>
-                    <div class="col span-2-of-3">
-                    <form action="/action_page.php" method="get"></div>
-                      <label for="men-only">Only Men</label>
-                      <input type="radio" name="gender" id="men-only" value="men-only">
-                      <label for="women-only">Only Women</label>
-                      <input type="radio" name="gender" id="women-only" value="women-only">
-                      <label for="both">Both</label>
-                      <input type="radio" name="gender" id="both" value="both">
-                  </form>
-                <div class="row">
-                  <div class="col span-1-of-3">
-                    <label for="city">City</label>
-                  </div>
+              <div class="row">
+                <div class="col span-1-of-3">
+                  <label for="orientation">I'm Interested In</label>
+                </div>
+                <div class="col span-2-of-3">
+                  <select name="orientation" id="orientation">
+                    <option value="Only woman">Only woman</option>
+                    <option value="Only man">Only man</option>
+                    <option value="Both">Both</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col span-1-of-3">
+                  <label for="city">City</label>
+                </div>
                 <div class="col span-2-of-3">
                   <select name="city" id="city">
                     <option value="seattle">Seattle</option>
@@ -119,6 +120,11 @@
                 </div>
               </div>
             </form>
+            <div id="result" class="row"></div>
+              <div class="row">
+                <input type="button" name="random" id="random" value="Click to start">
+              </div>
+            </div>
           </div>
         </section>
       </main>
