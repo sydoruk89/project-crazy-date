@@ -82,12 +82,7 @@ section {
     margin-top: 15px;
 }
 
-.logo-black {
-    display: none;
-    height: 60px;
-    width: auto;
-    float: left;
-}
+
 
 /* Main navigation */
 /* ----------------------------------------------- */
@@ -383,7 +378,7 @@ input[type=checkbox]{
 input[type=email],
 select,
 textarea{
-    background: linear-gradient(to right, rgba(255, 0, 0, 0), #daf3ff54);
+    background: linear-gradient(to right, rgba(248, 237, 237, 0.788), #daf3ff54);
 }
 
 .about-form ::placeholder, select option {
@@ -468,7 +463,12 @@ footer p {
 }
 
 /* Account form */
-
+#welcome-window {
+    text-align: center;
+    margin: 15px;
+    color:white;
+    font-size: 120%;
+}
 .account-form img {
     border-radius: 25%;
 }

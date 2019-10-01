@@ -12,8 +12,7 @@
       <header class="header-account">
         <nav>
           <div class="row">
-            <img src="img/logo-white.png" alt="heart logo" class="logo">
-            <img src="img/logo-black.png" alt="heart logo" class="logo-black">
+            <a href="index.html"><img src="img/logo-white.png" alt="heart logo" class="logo"></a>
             <ul class="main-nav">
               <li><a href="index.html">About project</a></li>
               <li><a href="team.html">Our team</a></li>
@@ -24,6 +23,7 @@
       </header>
       <main>
         <section class="account-form">
+            <div class="row" id="welcome-window"></div>
           <div class="row">
             <img id="image1"/>
           </div>
@@ -78,12 +78,7 @@
                   <label for="age">Age</label>
                 </div>
                 <div class="col span-2-of-3">
-                  <select name="age" id="age">
-                    <option value="18-23">18-23</option>
-                    <option value="24-29">24-29</option>
-                    <option value="30-35">30-35</option>
-                    <option value="36-40">36-40</option>
-                  </select>
+                  <input type="number" id="age" name="age">
                 </div>
               </div>
               <div class="row">
