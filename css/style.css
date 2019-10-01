@@ -262,9 +262,12 @@ input[type=button]:active {
     transform: scale(1.05);
 }
 
-/* Iphone app section*/
+/* Steps section IOS Android*/
 /* ----------------------------------------------- */
 
+.section-steps a {
+    border-bottom: none;
+}
 
 .steps-box:first-child{
 text-align: right;
@@ -376,6 +379,8 @@ input[type=checkbox]{
 
 .about-form input[type=text],
 input[type=email],
+input[type=number],
+input[type=password],
 select,
 textarea{
     background: linear-gradient(to right, rgba(248, 237, 237, 0.788), #daf3ff54);
@@ -463,6 +468,7 @@ footer p {
 }
 
 /* Account form */
+/* ----------------------------------------------- */
 #welcome-window {
     text-align: center;
     margin: 15px;
@@ -483,6 +489,6 @@ footer p {
 }
 
 #result ~ div {
-    width: 15%;
+    width: 12%;
     margin: 10px auto;
 }
