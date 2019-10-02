@@ -19,7 +19,7 @@ body {
 }
 
 .wrapper{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.103), rgba(0, 0, 0, 0.5)), url(../img/crazy-love.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.527)), url(../img/crazy-love.jpg);
     max-height: 100%;
     background-size: cover;
     background-position: center;
@@ -64,7 +64,7 @@ section {
 }
 
 .header-account{
-    background-image: linear-gradient(to right, rgba(255,0,0,0), #2980b9);
+    background-image: linear-gradient(to right, rgba(255,0,0,0), #0984e3);
 }
 
 .user-text-box{
@@ -76,12 +76,17 @@ section {
 }
 
 .logo {
-    height: 120px;
+    height: 110px;
     width: auto;
     float: left;
     margin-top: 15px;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
+
+nav img:hover{
+    transform: scale(1.1);
+}
 
 
 /* Main navigation */
@@ -387,7 +392,7 @@ input[type=number],
 input[type=password],
 select,
 textarea{
-    background: linear-gradient(to right, rgba(248, 237, 237, 0.788), #daf3ff54);
+    background: linear-gradient(to right, rgba(248, 237, 237, 0.884), #daf3ff54);
 }
 
 .about-form ::placeholder, select option {
@@ -473,6 +478,11 @@ footer p {
 
 /* Account form */
 /* ----------------------------------------------- */
+
+#welcome-window, #div-image{
+    display: none;
+}
+
 .account-form h3 {
     text-align: center;
     margin: 15px;
@@ -481,16 +491,23 @@ footer p {
     font-weight: bold;
 }
 .account-form img {
-    border-radius: 7%;
+    border: 4px solid #dfe6e9;
+    border-radius: 10%;
     float: left;
+    animation: flash linear 5s infinite;
 }
 
+@keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
 
 #description {
     float: left;
     margin-left: 15px;
     margin-top: 220px;
-    color: #fff;
+    color:#fff;
     font-size: 150%;
     font-weight: bold;
 }

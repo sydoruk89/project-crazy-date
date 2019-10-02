@@ -105,7 +105,7 @@ var allPersons = [];
 var indexArr = [];
 var ageRangeArr = [];
 // construction function
-function Product (gender, name, src, year){
+function Person (gender, name, src, year){
     this.gender = gender;
     this.name = name;
     this.src = src;
@@ -146,7 +146,7 @@ function generateIndex() {
 function checkArr() {
     checkAge();
     for (var i = 0; i < ageRangeArr.length; i++) {
-        new Product(ageRangeArr[i][0], ageRangeArr[i][1], ageRangeArr[i][2], ageRangeArr[i][3]);
+        new Person (ageRangeArr[i][0], ageRangeArr[i][1], ageRangeArr[i][2], ageRangeArr[i][3]);
     }
 }
 
@@ -187,6 +187,8 @@ function clear(){
 // welcome window
 function addWelcomeWindow(){
     var divEl = document.getElementById('welcome-window');
+    divEl.style.display = 'block';
+    document.getElementById('div-image').style.display = 'block';
     var content = 'Based on your info we found the best match for you!';
     addElement('h3', content, divEl);
 }
