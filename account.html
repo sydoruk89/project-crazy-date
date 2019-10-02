@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <title>Crazy Date</title>
-    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/grid.css" />
-  </head>
   <body class="body-account">
     <div class="wrapper">
       <header class="header-account">
@@ -25,7 +24,8 @@
         <section class="account-form">
             <div class="row" id="welcome-window"></div>
           <div class="row">
-            <img id="image1"/>
+            <img id="image1" class="w3-animate-fading"/>
+            <p id="description"></p>
           </div>
           <div class="row" id="div-form">
             <form action="#" id ="form" class="contact-form about-form">
@@ -95,6 +95,17 @@
               </div>
               <div class="row">
                 <div class="col span-1-of-3">
+                  <label>Age range</label>
+                </div>
+                <div class="col span-2-of-3">
+                  <label for="age-min">Min:</label>
+                  <input type="number" name="age-min" id="age-min" value="18" min="18" max="1000">
+                  <label for="age-max">Max:</label>
+                  <input type="number" name="age-max" id="age-max" value="18" min="18" max="1000">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col span-1-of-3">
                   <label for="city">City</label>
                 </div>
                 <div class="col span-2-of-3">
@@ -127,8 +138,8 @@
     <footer>
       <div class="row">
         <ul class="footer-nav">
-          <li><a href="#">About project</a></li>
-          <li><a href="#">Our team</a></li>
+          <li><a href="index.html">About project</a></li>
+          <li><a href="team.html">Our team</a></li>
           <li><a href="#">Contacts</a></li>
           <li><a href="#">News</a></li>
           <li><a href="#">IOS App</a></li>

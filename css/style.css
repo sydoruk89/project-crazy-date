@@ -363,6 +363,10 @@ textarea{
     border-radius: 3px;
     border: 1px solid #ccc;
 }
+input[type=number], 
+input[type=password]{
+    border-radius: 3px;
+}
 
 textarea{
     height: 100px;
@@ -469,20 +473,38 @@ footer p {
 
 /* Account form */
 /* ----------------------------------------------- */
-#welcome-window {
+.account-form h3 {
     text-align: center;
     margin: 15px;
     color:white;
-    font-size: 120%;
+    font-size: 150%;
+    font-weight: bold;
 }
 .account-form img {
-    border-radius: 25%;
+    border-radius: 7%;
+    float: left;
 }
+
+
+#description {
+    float: left;
+    margin-left: 15px;
+    margin-top: 220px;
+    color: #fff;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+
 #result{
     text-align: center;
     line-height: 1.3;
     color: white;
     margin-top: 20px;
+}
+
+#result h4 {
+    text-decoration: underline;
 }
 #result p{
     font-style: italic;

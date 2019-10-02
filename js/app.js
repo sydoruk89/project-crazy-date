@@ -1,11 +1,13 @@
 'use strict';
 
-var User = function (name, email, gender, age, orientation, city){
+var User = function (name, email, gender, age, orientation, ageMin, ageMax, city){
     this.name = name,
     this.email = email,
     this.gender = gender,
     this.age = age,
     this.orientation = orientation,
+    this.ageMin = ageMin;
+    this.ageMax = ageMax;
     this.city = city;
 };
 
@@ -14,13 +16,11 @@ var usersArr = [];
 function handleSubmit(event) {
     event.preventDefault();
     addInputs();
-    for(var i = 0; i < usersArr.length; i++){
-        if(usersArr[i].age >= 18) {
-            saveToLocalStorage();
-            showPreview();
-        } else{
-            alert('You are too small! You must be at least 18 yo!');
-        }
+    if(parseInt(document.getElementById('age').value) >= 18) {
+        saveToLocalStorage();
+        showPreview();
+    } else{
+        alert('Sorry, but you are too small! You must be at least 18 yo!');
     }
 }
 
@@ -30,12 +30,12 @@ function addInputs(){
     var gender = document.getElementById('gender').value;
     var age = parseInt(document.getElementById('age').value);
     var orientation = document.getElementById('orientation').value;
+    var ageMin = parseInt(document.getElementById('age-min').value);
+    var ageMax = parseInt(document.getElementById('age-max').value);
     var city = document.getElementById('city').value;
-    var user = new User (name, email, gender, age, orientation, city);
+    var user = new User (name, email, gender, age, orientation, ageMin, ageMax, city);
 
     usersArr.push(user);
-
-    return user;
 }
 
 // save to local storage
@@ -74,6 +74,11 @@ function showPreview() {
     addElement('h4', 'I\'m interested in:', divEl);
     var orientation = document.getElementById('orientation').value;
     addElement('p', orientation, divEl);
+    addElement('h4', 'Age range:', divEl);
+    var ageMin = document.getElementById('age-min').value;
+    var ageMax = parseInt(document.getElementById('age-max').value);
+    var minMax = `${ageMin} - ${ageMax}`;
+    addElement('p', minMax, divEl);
     addElement('h4', 'City:', divEl);
     var city = document.getElementById('city').value;
     addElement('p', city, divEl);
@@ -91,22 +96,20 @@ form.addEventListener('submit', handleSubmit);
 // render a random person to the page
 
 var imageOne = document.getElementById ('image1');
+var divDescription = document.getElementById('description');
 
-
-var filepathArr = ['img/bag.jpg', 'img/banana.jpg', 'img/bathroom.jpg', 'img/boots.jpg', 'img/breakfast.jpg', 'img/bubblegum.jpg', 'img/chair.jpg', 'img/cthulhu.jpg', 'img/dog-duck.jpg', 'img/dragon.jpg', 'img/pen.jpg', 'img/pet-sweep.jpg', 'img/scissors.jpg', 'img/shark.jpg', 'img/sweep.png', 'img/tauntaun.jpg', 'img/unicorn.jpg', 'img/usb.gif', 'img/water-can.jpg', 'img/wine-glass.jpg'];
-
-var names = ['bag', 'banana', 'bathroom', 'boots', 'breakfast', 'bubblegum', 'chair', 'cthulhu', 'dog-duck', 'dragon', 'pen', 'pet-sweep', 'scissors', 'shark', 'sweep', 'tauntaun', 'unicorn', 'usb', 'water-can', 'wine-glass'];
+var filepathArr = [['man', 'Tom Cruise', 'img/tom-cruise.jpg', 57], ['man', 'Justin Bieber', 'img/justin-bieber.jpg', 25], ['woman', 'Angelina Jolie', 'img/angelina_jolie.png', 44], ['woman', 'Jenifer Lopez', 'img/jenifer.jpg', 50], ['woman', 'Jenifer Aniston', 'img/Jennifer-Aniston.jpg', 50], ['woman', 'Megan Fox', 'img/Megan_Fox.jpg', 33], ['woman', 'Amber Heard', 'img/amber_heard.jpg', 33], ['woman', 'Minka Kelly', 'img/minka-kelly.jpg', 39], ['woman', 'Charlize Theron', 'img/charlize-theron.jpg', 44], ['woman', 'Gal Gadot', 'img/gal-gadot.jpg', 34], ['man', 'Elijah Wood', 'img/elijah-wood.jpg', 38]];
 
 
 var allPersons = [];
-
+var indexArr = [];
+var ageRangeArr = [];
 // construction function
-function Product (name, src){
+function Product (gender, name, src, year){
+    this.gender = gender;
     this.name = name;
     this.src = src;
-    this.votes = 0;
-    this.views = 0;
-
+    this.year = year;
     allPersons.push(this);
 }
 
@@ -121,12 +124,13 @@ function random(max){
 // render images
 function render(){
     generateImg(imageOne);
+    var content = allPersons[indexArr].name + ' ' + allPersons[indexArr].year + ' ' + 'years old';
+    addElement('p', content, divDescription);
 }
 
 // rendering pictures to the page
 function generateImg(domEl) {
     var index = generateIndex();
-    allPersons[index].views++;
     domEl.src = allPersons[index].src;
     domEl.title = allPersons[index].name;
     domEl.alt = allPersons[index].name;
@@ -134,13 +138,43 @@ function generateImg(domEl) {
 
 // generating index
 function generateIndex() {
-    var index = random(allPersons.length);
+    var index = random(ageRangeArr.length);
+    indexArr.push(index);
     return index;
 }
 
 function checkArr() {
-    for (var i = 0; i < filepathArr.length; i++) {
-        new Product(names[i],filepathArr[i]);
+    checkAge();
+    for (var i = 0; i < ageRangeArr.length; i++) {
+        new Product(ageRangeArr[i][0], ageRangeArr[i][1], ageRangeArr[i][2], ageRangeArr[i][3]);
+    }
+}
+
+
+// function check age and gender in array
+
+function checkAge (){
+    if(usersArr[0].orientation === 'Only woman'){
+        for (let i=0; i < filepathArr.length; i++) {
+            if (filepathArr[i][3] >= usersArr[0].ageMin && filepathArr[i][3] <= usersArr[0].ageMax && filepathArr[i][0] === 'woman') {
+                ageRangeArr.push(filepathArr[i]);
+                console.log('Only woman');
+            }
+        }
+    } else if(usersArr[0].orientation === 'Only man'){
+        for (let i=0; i < filepathArr.length; i++) {
+            if (filepathArr[i][3] >= usersArr[0].ageMin && filepathArr[i][3] <= usersArr[0].ageMax && filepathArr[i][0] === 'man') {
+                ageRangeArr.push(filepathArr[i]);
+                console.log('Only man');
+            }
+        }
+    } else {
+        for (let i=0; i < filepathArr.length; i++) {
+            if (filepathArr[i][3] >= usersArr[0].ageMin && filepathArr[i][3] <= usersArr[0].ageMax) {
+                ageRangeArr.push(filepathArr[i]);
+                console.log('Both');
+            }
+        }
     }
 }
 
