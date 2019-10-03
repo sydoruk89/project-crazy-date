@@ -98,7 +98,7 @@ form.addEventListener('submit', handleSubmit);
 var imageOne = document.getElementById ('image1');
 var divDescription = document.getElementById('description');
 
-var filepathArr = [['man', 'Tom Cruise', 'img/tom-cruise.jpg', 57], ['man', 'Justin Bieber', 'img/justin-bieber.jpg', 25], ['woman', 'Angelina Jolie', 'img/angelina_jolie.png', 44], ['woman', 'Jenifer Lopez', 'img/jenifer.jpg', 50], ['woman', 'Jenifer Aniston', 'img/Jennifer-Aniston.jpg', 50], ['woman', 'Megan Fox', 'img/Megan_Fox.jpg', 33], ['woman', 'Amber Heard', 'img/amber_heard.jpg', 33], ['woman', 'Minka Kelly', 'img/minka-kelly.jpg', 39], ['woman', 'Charlize Theron', 'img/charlize-theron.jpg', 44], ['woman', 'Gal Gadot', 'img/gal-gadot.jpg', 34], ['man', 'Elijah Wood', 'img/elijah-wood.jpg', 38]];
+var filepathArr = [['woman', 'Delilah Belle', 'img/delilah-belle.jpg', 18], ['man', 'Tom Cruise', 'img/tom-cruise.jpg', 57], ['man', 'Justin Bieber', 'img/justin-bieber.jpg', 25], ['woman', 'Angelina Jolie', 'img/angelina_jolie.png', 44], ['woman', 'Jenifer Lopez', 'img/jenifer.jpg', 50], ['woman', 'Jenifer Aniston', 'img/Jennifer-Aniston.jpg', 50], ['woman', 'Megan Fox', 'img/Megan_Fox.jpg', 33], ['woman', 'Amber Heard', 'img/amber_heard.jpg', 33], ['woman', 'Minka Kelly', 'img/minka-kelly.jpg', 39], ['woman', 'Charlize Theron', 'img/charlize-theron.jpg', 44], ['woman', 'Gal Gadot', 'img/gal-gadot.jpg', 34], ['man', 'Elijah Wood', 'img/elijah-wood.jpg', 38]];
 
 
 var allPersons = [];
