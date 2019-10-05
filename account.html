@@ -12,9 +12,12 @@
           <div class="row">
             <a href="index.html"><img src="img/logo-white.png" alt="heart logo" class="logo"></a>
             <ul class="main-nav">
-              <li><a href="index.html">About project</a></li>
-              <li><a href="team.html">Our team</a></li>
-              <li><a href="#">Contacts</a></li>
+                <li><a href="account.html">Sign Up</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="main.html">Date Review</a></li>
+                <li><a href="daters.html">Daters</a></li>
+                <li><a href="team.html">Our team</a></li>
+                <li><a href="contacts.html">Feedback</a></li>
             </ul>
           </div>
         </nav>
@@ -25,6 +28,8 @@
           <div class="row" id="div-image">
             <img id="image1"/>
             <p id="description"></p>
+            <p class="predict"></p>
+            <button type="button" id="preview-button"></button>
           </div>
           <div class="row" id="div-form">
             <form action="#" id ="form" class="contact-form about-form">
@@ -77,7 +82,7 @@
                   <label for="age">Age</label>
                 </div>
                 <div class="col span-2-of-3">
-                  <input type="number" id="age" name="age" placeholder="Your age" required>
+                  <input type="number" id="age" min="1" name="age" placeholder="Your age" required>
                 </div>
               </div>
               <div class="row">
@@ -86,8 +91,8 @@
                 </div>
                 <div class="col span-2-of-3">
                   <select name="orientation" id="orientation">
-                    <option value="Only woman">Only woman</option>
-                    <option value="Only man">Only man</option>
+                    <option value="Only woman">Women</option>
+                    <option value="Only man">Men</option>
                     <option value="Both">Both</option>
                   </select>
                 </div>
@@ -98,9 +103,9 @@
                 </div>
                 <div class="col span-2-of-3">
                   <label for="age-min">Min:</label>
-                  <input type="number" name="age-min" id="age-min" value="18" min="18" max="1000">
+                  <input type="number" name="age-min" id="age-min" value="18" min="18" max="90">
                   <label for="age-max">Max:</label>
-                  <input type="number" name="age-max" id="age-max" value="18" min="18" max="1000">
+                  <input type="number" name="age-max" id="age-max" value="18" min="18" max="90">
                 </div>
               </div>
               <div class="row">
@@ -139,7 +144,7 @@
         <ul class="footer-nav">
           <li><a href="index.html">About project</a></li>
           <li><a href="team.html">Our team</a></li>
-          <li><a href="#">Contacts</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
           <li><a href="#">News</a></li>
           <li><a href="#">IOS App</a></li>
           <li><a href="#">Android App</a></li>
